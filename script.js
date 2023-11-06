@@ -5,3 +5,9 @@ const h = 500;
 const padding = 10;
 //Padding til akserne for at man kan se det hele
 const axisPadding = 70;
+// Hent data fra albums.json
+fetch('albums.json')
+    .then(response => response.json())
+    .then(albumsData => {
+
+      
