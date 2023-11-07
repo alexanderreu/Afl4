@@ -16,13 +16,26 @@ fetch('albums.json')
     .then(response => response.json())
     .then(albumsData => {});
 
-        // FullPlays-værdierne fra albumsData
-        let fullPlaysData = albumsData.map(function (album) {
+        // FullPlays-værdierne fra json
+        const fullPlaysData = albumsData.map(function (album) {
             return album.fullPlays;
         });
+        
+        // Rating-værdierne fra json
+        const ratingData = albumsData.map(function (album) {
+            return album.rating;
+        });
+
+        // ProductionYear-værdierne fra json
+        const productionYearData = albumsData.map(function (album) {
+            return album.productionYear;
+        });
+
+        // De tre arrays samles i et array
+        const dataset = fullPlaysData.concat(ratingData, productionYearData);
 
         // Albumnavne til labels
-        let albumLabels = albumsData.map(function (album) {
+        const albumLabels = albumsData.map(function (album) {
             return album.albumName;
         });
 
@@ -38,3 +51,5 @@ let xScale = null;
 // Der defineres en variabel for Akserne, som værdisættes senere 
 let xAxis = null;
 let yAxis = null;
+
+
