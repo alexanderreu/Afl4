@@ -46,4 +46,4 @@ fetch('albums.json')
         // Der defineres en variabel for Akserne, som værdisættes senere 
         let xAxis = null;
         let yAxis = null;
-    }
+    });
