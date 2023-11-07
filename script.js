@@ -14,7 +14,7 @@ const axisPadding = 70;
 // Hent data fra albums.json
 fetch('albums.json')
     .then(response => response.json())
-    .then(albumsData => {});
+    .then(albumsData => {
 
         // FullPlays-værdierne fra json
         const fullPlaysData = albumsData.map(function (album) {
@@ -31,17 +31,15 @@ fetch('albums.json')
             return album.productionYear;
         });
 
-        // De tre arrays samles i et array
-        const dataset = fullPlaysData.concat(ratingData, productionYearData);
-
         // Albumnavne til labels
         const albumLabels = albumsData.map(function (album) {
             return album.albumName;
         });
 
+       
 
 // Denne kode opretter et SVG-element og tilføjer det til HTML-kroppen med en angivet bredde og højde.
-    const svg = d3 .select("body").append("svg").attr("width", w).attr("height", h);
+    const svg = d3.select("body").append("svg").attr("width", w).attr("height", h);
 
 
 // Der defineres en Skaleringsfunktion, som værdisættes senere
@@ -52,4 +50,4 @@ let xScale = null;
 let xAxis = null;
 let yAxis = null;
 
-
+});
