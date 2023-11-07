@@ -10,6 +10,7 @@ const padding = 10;
 // Padding til akserne for at man kan se det hele
 const axisPadding = 70;
 
+console.log("hello")
 
 // Hent data fra albums.json
 fetch('albums.json')
@@ -30,24 +31,19 @@ fetch('albums.json')
         const productionYearData = albumsData.map(function (album) {
             return album.productionYear;
         });
+        console.log(productionYearData)
 
         // Albumnavne til labels
         const albumLabels = albumsData.map(function (album) {
             return album.albumName;
         });
 
-       
+        
+        // Der defineres en Skaleringsfunktion, som værdisættes senere
+        let yScale = null;
+        let xScale = null;
 
-// Denne kode opretter et SVG-element og tilføjer det til HTML-kroppen med en angivet bredde og højde.
-    const svg = d3.select("body").append("svg").attr("width", w).attr("height", h);
-
-
-// Der defineres en Skaleringsfunktion, som værdisættes senere
-let yScale = null;
-let xScale = null;
-
-// Der defineres en variabel for Akserne, som værdisættes senere 
-let xAxis = null;
-let yAxis = null;
-
-});
+        // Der defineres en variabel for Akserne, som værdisættes senere 
+        let xAxis = null;
+        let yAxis = null;
+    }
