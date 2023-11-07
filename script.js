@@ -11,6 +11,16 @@ fetch('albums.json')
     .then(response => response.json())
     .then(albumsData => {});
 
+        // FullPlays-værdierne fra albumsData
+        let fullPlaysData = albumsData.map(function (album) {
+            return album.fullPlays;
+        });
+
+        // Albumnavne til labels
+        let albumLabels = albumsData.map(function (album) {
+            return album.albumName;
+        });
+
 //Denne kode opretter et SVG-element og tilføjer det til HTML-kroppen med en angivet bredde og højde.
 const svg = d3
   .select("body")
