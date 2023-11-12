@@ -1,0 +1,62 @@
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: -590vh;
+
+    flex-direction: column; /* Added to arrange items vertically */
+  }
+  .background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(Billede1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; /* Ensure the background is behind other elements */
+ 
+
+   
+}
+  h1 {
+    margin-top: 20px; /* Adjust the value as needed */
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  
+  p {
+    font-size: 22px;
+    margin-bottom: 30px; /* Adjust as needed */
+  }
+ 
+  #buttonContainer {
+    position: absolute;
+  top: 140px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+ 
+  }
+  
+  #sortByFullplays,
+  #sortByProduktionsår,
+  #sortByrating {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    cursor: pointer;
+    background-color: #0e0f0e; /* Green background color */
+    color: white; /* White text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 10px; /* Adjust margin as needed */
+    
+  }
+  
+  
+  
+  
+  
+  
