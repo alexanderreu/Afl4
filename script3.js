@@ -219,6 +219,7 @@ svg.append("text")
         .attr("text-anchor", "middle")
         .attr("x", w / 2)
         .attr("y", h - 10)
+        .style("font-size", "20px") 
         .text("Rating /  Produktionsår");
 
 function formatAxisX() {
